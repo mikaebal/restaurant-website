@@ -16,4 +16,4 @@ View my project [HERE](https://mikaebal.github.io/restaurant-website/) 🔍
 - jQuery (JavaScript)
 - HTML
 - CSS
-- Dash (General Assembly)
+- Dash 
