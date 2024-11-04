@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikaela's Kitchen</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Vast Shadow", serif;
+            margin: 0 auto;
+            max-width: 600px;
+            background: #372528;
+        }
+        div {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin: 40px 0 0 0;
+            border-radius: 12px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            color: #e0d1d4;
+            margin: 65px 0 0 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 22px;
+            color: #e0d1d4;
+            margin: 15px 0 70px 0;
+        }
+        p {
+            color: rgba(255,255,255,1);
+            background: black;
+            background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+            padding: 10px;
+            line-height: 28px;
+            text-align: justify;
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            height: 30px;
+            transition: height .5s;
+        }
+        small {
+            opacity: 0;
+            font-family: helvetica, sans-serif;
+        }
+        .show-description p {
+            height: 150px;
+        }
+        .show-description small {
+            opacity: 1;
+        }
+        .first {
+            background-image: url("https://i.imgur.com/4u9NDLh.jpeg");
+        }
+        .second {
+            background-image: url("https://i.imgur.com/sy0BM0I.jpeg");
+        }
+        .dessert {
+            background-image: url("https://i.imgur.com/HLdQWE4.jpeg");
+        }
+        .price {
+            float: right;
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 38px;
+                margin-top: 23px;
+            }
+            h2 {
+                font-size: 15px;
+                margin: 20px 3px 30px 3px;
+            }
+            div {
+                margin: 20px 12px 0 12px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 24px;
+            }
+            small {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mikaela's Kitchen</h1>
+    <h2>Filipino Flavor in the Bay</h2>
+    <div class="first">
+        <p>Pancit Fiesta <span class="price">$15</span><br />
+        <small>A flavorful stir-fry of rice noodles tossed with fresh veggies and your choice of chicken or shrimp. A dish that brings the spirit of Filipino celebrations to your table!</small></p>
+    </div>
+
+    <div class="second">
+        <p>Adobo Paradise <span class="price">$25</span><br />
+        <small>Tender chicken simmered in a savory sauce of soy, vinegar, garlic, and coconut, served with fluffy white rice. A comforting classic that warms the soul!</small></p>
+    </div>
+      
+    <div class="dessert">
+        <p>Ube Delight <span class="price">$10</span><br />
+        <small>Creamy cheesecake made with sweet ube, nestled in a buttery graham cracker crust. A delightful twist that satisfies every sweet tooth!</small></p>
+    </div>
+
+    <script>
+        $('div').on('click', function() {
+            $(this).toggleClass('show-description');
+        });
+    </script>
+</body>
+</html>
